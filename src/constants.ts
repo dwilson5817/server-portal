@@ -22,7 +22,7 @@ export const SERVICES: Service[] = [
         subtitle: "Open source server virtualization management",
         description: "An open-source software server for virtualization management. It is a hosted Type-1 hypervisor that can run operating systems including Linux and Windows on x64 hardware.",
         links: [
-            { text: "New York", url: "https://new-york.dylanw.net/" },
+            { text: "London", url: "https://london.dylanw.net/" },
         ],
     },
     {
