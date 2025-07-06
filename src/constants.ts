@@ -12,9 +12,7 @@ export const SERVICES: Service[] = [
         subtitle: "Dedicated server provider",
         description: "ReliableSite is a Dedicated Server provider out of NY, Miami, and Los Angeles that offers affordable and reliable server solutions for small to large.",
         links: [
-            { text: "Billing", url: "https://payments.reliablesite.net/" },
-            { text: "Dedicated", url: "https://dedicated.reliablesite.net/" },
-            { text: "Support", url: "https://support.reliablesite.net/" },
+            { text: "Manager", url: "https://www.ovh.com/manager/" },
         ],
     },
     {
