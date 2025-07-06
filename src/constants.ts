@@ -8,9 +8,9 @@ import { Project, Service } from './types.ts';
 
 export const SERVICES: Service[] = [
     {
-        title: "ReliableSite",
-        subtitle: "Dedicated server provider",
-        description: "ReliableSite is a Dedicated Server provider out of NY, Miami, and Los Angeles that offers affordable and reliable server solutions for small to large.",
+        title: "OVHcloud",
+        subtitle: "Cloud computing company",
+        description: "OVH is a French cloud computing company which offers VPS, dedicated servers, and other web services.  The company was founded in 1999 and is headquartered in Roubaix, France.",
         links: [
             { text: "Manager", url: "https://www.ovh.com/manager/" },
         ],
