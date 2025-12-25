@@ -74,6 +74,15 @@ export const SERVICES: Service[] = [
             { text: "Access", url: "https://vault.dylanw.net/" },
         ],
     },
+    {
+        title: "rsync.net",
+        subtitle: "Cloud storage",
+        description: "We give you an empty UNIX filesystem to access with any SSH tool.  Built on ZFS for data security and fault tolerance",
+        links: [
+            { text: "Home", url: "https://rsync.net/index.html" },
+            { text: "Account", url: "https://rsync.net/am" },
+        ],
+    },
 ]
 
 export const PROJECTS: Project[] = [
