@@ -83,6 +83,15 @@ export const SERVICES: Service[] = [
             { text: "Account", url: "https://rsync.net/am" },
         ],
     },
+    {
+        title: "Prometheus",
+        subtitle: "Monitoring system & time series database",
+        description: "An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.",
+        links: [
+            { text: "Query", url: "https://prometheus.dylanw.net/query" },
+            { text: "Alerts", url: "https://prometheus.dylanw.net/alerts" },
+        ],
+    },
 ]
 
 export const PROJECTS: Project[] = [
