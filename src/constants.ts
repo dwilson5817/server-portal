@@ -46,8 +46,8 @@ export const SERVICES: Service[] = [
         subtitle: "The mailserver suite",
         description: "mailcow is a mail server suite based on Dovecot, Postfix and other open source software, that provides a modern web UI for user/server administration.",
         links: [
-            { text: "Admin", url: "https://mail.dylanw.net/" },
-            { text: "Webmail", url: "https://mail.dylanw.net/SOGo/" },
+            { text: "Admin", url: "https://mail.dylanw.net/admin/" },
+            { text: "Login", url: "https://mail.dylanw.net/" },
         ],
     },
     {
