@@ -1,9 +1,9 @@
-import AT from './assets/AT-128px.png';
-import CC from './assets/CC-128px.png';
-import DW from './assets/DW-128px.png';
-import MR from './assets/MR-128px.png';
-import RW from './assets/RW-128px.png';
-import UW from './assets/UW-128px.png';
+import AT from './assets/antrim-tiling-website-128px.png';
+import CC from './assets/check-character-calculator-128px.png';
+import DW from './assets/personal-website-128px.png';
+import MR from './assets/miners-realm-128px.png';
+import RW from './assets/resume-website-128px.png';
+import UW from './assets/utility-website-128px.png';
 import { Project, Service } from './types.ts';
 
 export const SERVICES: Service[] = [
