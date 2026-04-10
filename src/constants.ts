@@ -97,8 +97,8 @@ export const SERVICES: Service[] = [
         subtitle: "DMARC reports analysis tool",
         description: "A simple web application to monitor your authentication and analyse DMARC reports across domains.",
         links: [
-            { text: "Dashboard", url: "https://prometheus.dylanw.net/dashboard" },
-            { text: "Reports", url: "https://prometheus.dylanw.net/reports" },
+            { text: "Dashboard", url: "https://dmarc.dylanw.net/dashboard" },
+            { text: "Reports", url: "https://dmarc.dylanw.net/reports" },
         ],
     },
 ]
