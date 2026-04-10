@@ -92,6 +92,15 @@ export const SERVICES: Service[] = [
             { text: "Alerts", url: "https://prometheus.dylanw.net/alerts" },
         ],
     },
+    {
+        title: "DMARC Analyser",
+        subtitle: "DMARC reports analysis tool",
+        description: "A simple web application to monitor your authentication and analyse DMARC reports across domains.",
+        links: [
+            { text: "Dashboard", url: "https://prometheus.dylanw.net/dashboard" },
+            { text: "Reports", url: "https://prometheus.dylanw.net/reports" },
+        ],
+    },
 ]
 
 export const PROJECTS: Project[] = [
