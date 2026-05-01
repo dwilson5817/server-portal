@@ -101,6 +101,14 @@ export const SERVICES: Service[] = [
             { text: "Reports", url: "https://dmarc.dylanw.net/reports" },
         ],
     },
+    {
+        title: "Pocket ID",
+        subtitle: "OIDC provider",
+        description: "A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.",
+        links: [
+            { text: "Access", url: "https://auth.dylanw.net/" },
+        ],
+    },
 ]
 
 export const PROJECTS: Project[] = [
