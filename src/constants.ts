@@ -1,7 +1,14 @@
-import AT from "./assets/antrim-tiling-website-128px.png"
-import CC from "./assets/check-character-calculator-128px.png"
-import UW from "./assets/utility-website-128px.png"
-import type { Project, Section, Service } from "./types.ts"
+import AntrimTiling from "./assets/antrim-tiling-website-128px.png"
+import IconGenerator from "./assets/project-icon-generator-128px.png"
+import CheckCharacter from "./assets/check-character-calculator-128px.png"
+import UtilityWebsite from "./assets/utility-website-128px.png"
+import ResumeWebsite from "./assets/resume-website-128px.png"
+import PersonalBlog from "./assets/personal-blog-128px.png"
+import PersonalWebsite from "./assets/personal-website-128px.png"
+import Mailcow from "./assets/mailcow-128px.png"
+import AuthCentral from "./assets/auth-central-128px.png"
+import DmarcAnalyser from "./assets/dmarc-analyser-128px.png"
+import type { Section, Service } from "./types.ts"
 
 const EXTERNAL_SERVICES: Service[] = [
   {
@@ -38,15 +45,6 @@ const INFRASTRUCTURE: Service[] = [
     links: [{ text: "London", url: "https://london.dylanw.net/" }],
   },
   {
-    title: "mailcow",
-    description: "Mailserver suite",
-    domain: "mail.dylanw.net",
-    links: [
-      { text: "Admin", url: "https://mail.dylanw.net/admin/" },
-      { text: "Login", url: "https://mail.dylanw.net/" },
-    ],
-  },
-  {
     title: "Grafana",
     description: "Open-source monitoring platform",
     domain: "monitoring.dylanw.net",
@@ -68,6 +66,17 @@ const INFRASTRUCTURE: Service[] = [
     ],
   },
   {
+    image: Mailcow,
+    title: "mailcow",
+    description: "Mailserver suite",
+    domain: "mail.dylanw.net",
+    links: [
+      { text: "Admin", url: "https://mail.dylanw.net/admin/" },
+      { text: "Login", url: "https://mail.dylanw.net/" },
+    ],
+  },
+  {
+    image: DmarcAnalyser,
     title: "DMARC Analyser",
     description: "DMARC reports analysis tool",
     domain: "dmarc.dylanw.net",
@@ -77,6 +86,7 @@ const INFRASTRUCTURE: Service[] = [
     ],
   },
   {
+    image: AuthCentral,
     title: "Pocket ID",
     description: "OIDC provider",
     domain: "auth.dylanw.net",
@@ -84,7 +94,7 @@ const INFRASTRUCTURE: Service[] = [
   },
 ]
 
-const PROJECTS: (Service | Project)[] = [
+const PROJECTS: Service[] = [
   {
     title: "GitLab",
     description: "Web-based DevOps lifecycle tool",
@@ -95,21 +105,28 @@ const PROJECTS: (Service | Project)[] = [
     ],
   },
   {
-    image: UW,
+    image: UtilityWebsite,
     title: "Utility Website",
     description: "A collection of small utilities",
     domain: "tools.dylanw.dev",
     links: [{ text: "Open", url: "https://tools.dylanw.dev/" }],
   },
   {
-    image: CC,
+    image: IconGenerator,
+    title: "Project Icon Generator",
+    description: "Generate icons used by GitLab projects",
+    domain: "icons.dylanw.dev",
+    links: [{ text: "Open", url: "https://icons.dylanw.dev/" }],
+  },
+  {
+    image: CheckCharacter,
     title: "Check Character Calculator",
     description: "Calculate the check character in an Argos stockroom",
     domain: "check.dylanw.dev",
     links: [{ text: "Open", url: "https://check.dylanw.dev/" }],
   },
   {
-    image: AT,
+    image: AntrimTiling,
     title: "Antrim Tiling",
     description: "Professional tiling services in County Antrim",
     domain: "www.antrimtiling.com",
@@ -119,18 +136,21 @@ const PROJECTS: (Service | Project)[] = [
 
 const PROFESSIONAL: Service[] = [
   {
+    image: PersonalWebsite,
     title: "Personal Website",
     description: "My personal website",
     domain: "www.dylanwilson.dev",
     links: [{ text: "Open", url: "https://www.dylanwilson.dev/" }],
   },
   {
+    image: PersonalBlog,
     title: "Personal Blog",
     description: "My personal website",
     domain: "blog.dylanwilson.dev",
     links: [{ text: "Open", url: "https://www.dylanwilson.dev/" }],
   },
   {
+    image: ResumeWebsite,
     title: "Resume Website",
     description: "A simple PDF viewer which displays my CV.",
     domain: "resume.dylanw.dev",
