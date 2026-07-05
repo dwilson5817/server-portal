@@ -1,4 +1,4 @@
-import type { Project, Service } from "@/types.ts"
+import type { Service } from "@/types.ts"
 import {
   Item,
   ItemActions,
@@ -10,7 +10,7 @@ import {
 import { buttonVariants } from "./ui/button"
 
 interface ServiceCardProps {
-  service: Service | Project
+  service: Service
 }
 
 const ServiceCard = ({ service }: ServiceCardProps) => {

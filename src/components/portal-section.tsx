@@ -1,4 +1,4 @@
-import type { Project, Service } from "@/types.ts"
+import type { Service } from "@/types.ts"
 import ServiceCard from "@/components/service-card.tsx"
 import { ItemGroup } from "@/components/ui/item.tsx"
 import {
@@ -21,7 +21,7 @@ import { ChevronDown, ChevronUp } from "lucide-react"
 interface PortalSectionProps {
   title: string
   description: string
-  services: (Service | Project)[]
+  services: Service[]
 }
 
 const PortalSection = ({
