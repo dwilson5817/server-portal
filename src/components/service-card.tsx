@@ -22,13 +22,12 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
       render={
         <div>
           {"image" in service && (
-            <ItemMedia variant="image">
+            <ItemMedia variant="image" className="rounded-md">
               <img
                 src={service.image}
                 alt={service.title}
                 width={32}
                 height={32}
-                className="rounded-xs"
               />
             </ItemMedia>
           )}
