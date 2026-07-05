@@ -1,19 +1,12 @@
-import { Button } from "@/components/ui/button"
+import { SECTIONS } from "@/constants.ts"
+import PortalSection from "@/components/portal-section.tsx"
 
 export function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 p-6">
+      {SECTIONS.map((section) => (
+        <PortalSection key={section.title} {...section} />
+      ))}
     </div>
   )
 }
