@@ -5,8 +5,8 @@ export interface Link {
 
 export interface Service {
   title: string
-  subtitle: string
   description: string
+  domain: string
   links: Link[]
 }
 

@@ -1,51 +1,46 @@
 import AT from "./assets/antrim-tiling-website-128px.png"
 import CC from "./assets/check-character-calculator-128px.png"
-import DW from "./assets/personal-website-128px.png"
-import MR from "./assets/miners-realm-128px.png"
-import RW from "./assets/resume-website-128px.png"
 import UW from "./assets/utility-website-128px.png"
 import type { Project, Section, Service } from "./types.ts"
 
-export const SERVICES: Service[] = [
+const EXTERNAL_SERVICES: Service[] = [
   {
     title: "OVHcloud",
-    subtitle: "Cloud computing company",
-    description:
-      "OVH is a French cloud computing company which offers VPS, dedicated servers, and other web services.  The company was founded in 1999 and is headquartered in Roubaix, France.",
+    description: "Cloud computing company",
+    domain: "www.ovhcloud.com",
     links: [{ text: "Manager", url: "https://www.ovh.com/manager/" }],
   },
   {
-    title: "Proxmox VE",
-    subtitle: "Open source server virtualization management",
-    description:
-      "An open-source software server for virtualization management. It is a hosted Type-1 hypervisor that can run operating systems including Linux and Windows on x64 hardware.",
-    links: [{ text: "London", url: "https://london.dylanw.net/" }],
-  },
-  {
     title: "Amazon Web Services",
-    subtitle: "IT service management company",
-    description:
-      "Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered, pay-as-you-go basis",
+    description: "IT service management company",
+    domain: "aws.amazon.com",
     links: [
       { text: "Root", url: "https://console.aws.amazon.com/" },
       { text: "SSO", url: "https://dylanw.awsapps.com/start/" },
     ],
   },
   {
-    title: "GitLab",
-    subtitle: "Web-based DevOps lifecycle tool",
-    description:
-      "With GitLab, you get a complete CI/CD toolchain in a single application. One interface. One conversation. One permission model. Thousands of features.",
+    title: "rsync.net",
+    description: "Cloud storage",
+    domain: "www.rsync.net",
     links: [
-      { text: "Explore", url: "https://gitlab.dylanw.dev/" },
-      { text: "Sign in", url: "https://gitlab.dylanw.dev/users/sign_in" },
+      { text: "Home", url: "https://rsync.net/index.html" },
+      { text: "Account", url: "https://rsync.net/am" },
     ],
+  },
+]
+
+const INFRASTRUCTURE: Service[] = [
+  {
+    title: "Proxmox VE",
+    description: "Open source server virtualization management",
+    domain: "london.dylanw.net",
+    links: [{ text: "London", url: "https://london.dylanw.net/" }],
   },
   {
     title: "mailcow",
-    subtitle: "The mailserver suite",
-    description:
-      "mailcow is a mail server suite based on Dovecot, Postfix and other open source software, that provides a modern web UI for user/server administration.",
+    description: "Mailserver suite",
+    domain: "mail.dylanw.net",
     links: [
       { text: "Admin", url: "https://mail.dylanw.net/admin/" },
       { text: "Login", url: "https://mail.dylanw.net/" },
@@ -53,40 +48,20 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Grafana",
-    subtitle: "Open-source monitoring platform",
-    description:
-      "Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.",
-    links: [{ text: "Access", url: "https://monitoring.dylanw.net/" }],
-  },
-  {
-    title: "Pterodactyl",
-    subtitle: "Open-source game server management panel",
-    description:
-      "Game server management panel built with PHP, React, and Go. Designed with security in mind all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to end users.",
-    links: [{ text: "Access", url: "https://panel.minersrealm.net/" }],
+    description: "Open-source monitoring platform",
+    domain: "monitoring.dylanw.net",
+    links: [{ text: "Open", url: "https://monitoring.dylanw.net/" }],
   },
   {
     title: "Vault",
-    subtitle: "Secrets management",
-    description:
-      "Vault secures, stores, and tightly controls access to tokens, passwords, certificates, API keys, and other secrets in modern computing.",
-    links: [{ text: "Access", url: "https://vault.dylanw.net/" }],
-  },
-  {
-    title: "rsync.net",
-    subtitle: "Cloud storage",
-    description:
-      "We give you an empty UNIX filesystem to access with any SSH tool.  Built on ZFS for data security and fault tolerance",
-    links: [
-      { text: "Home", url: "https://rsync.net/index.html" },
-      { text: "Account", url: "https://rsync.net/am" },
-    ],
+    description: "Secrets management",
+    domain: "vault.dylanw.net",
+    links: [{ text: "Open", url: "https://vault.dylanw.net/" }],
   },
   {
     title: "Prometheus",
-    subtitle: "Monitoring system & time series database",
-    description:
-      "An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.",
+    description: "Monitoring system & time series database",
+    domain: "prometheus.dylanw.net",
     links: [
       { text: "Query", url: "https://prometheus.dylanw.net/query" },
       { text: "Alerts", url: "https://prometheus.dylanw.net/alerts" },
@@ -94,9 +69,8 @@ export const SERVICES: Service[] = [
   },
   {
     title: "DMARC Analyser",
-    subtitle: "DMARC reports analysis tool",
-    description:
-      "A simple web application to monitor your authentication and analyse DMARC reports across domains.",
+    description: "DMARC reports analysis tool",
+    domain: "dmarc.dylanw.net",
     links: [
       { text: "Dashboard", url: "https://dmarc.dylanw.net/dashboard" },
       { text: "Reports", url: "https://dmarc.dylanw.net/reports" },
@@ -104,67 +78,105 @@ export const SERVICES: Service[] = [
   },
   {
     title: "Pocket ID",
-    subtitle: "OIDC provider",
-    description:
-      "A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.",
-    links: [{ text: "Access", url: "https://auth.dylanw.net/" }],
+    description: "OIDC provider",
+    domain: "auth.dylanw.net",
+    links: [{ text: "Open", url: "https://auth.dylanw.net/" }],
   },
 ]
 
-export const PROJECTS: Project[] = [
+const PROJECTS: (Service | Project)[] = [
   {
-    image: DW,
-    title: "Personal Website",
-    subtitle: "www.dylanwilson.dev",
-    description: "My personal website",
-    links: [{ text: "Access", url: "https://www.dylanwilson.dev/" }],
+    title: "GitLab",
+    description: "Web-based DevOps lifecycle tool",
+    domain: "gitlab.dylanw.dev",
+    links: [
+      { text: "Explore", url: "https://gitlab.dylanw.dev/" },
+      { text: "Sign in", url: "https://gitlab.dylanw.dev/users/sign_in" },
+    ],
   },
   {
     image: UW,
     title: "Utility Website",
-    subtitle: "utils.dylanw.dev",
-    description: "Link shortening and image hosting website",
-    links: [{ text: "Access", url: "https://utils.dylanw.dev/" }],
+    description: "A collection of small utilities",
+    domain: "tools.dylanw.dev",
+    links: [{ text: "Open", url: "https://tools.dylanw.dev/" }],
   },
   {
     image: CC,
     title: "Check Character Calculator",
-    subtitle: "check.dylanw.dev",
-    description: "Calculate check character",
-    links: [{ text: "Access", url: "https://check.dylanw.dev/" }],
-  },
-  {
-    image: RW,
-    title: "Resume Website",
-    subtitle: "resume.dylanw.dev",
-    description: "A simple PDF viewer which displays my CV.",
-    links: [{ text: "Access", url: "https://resume.dylanw.dev/" }],
+    description: "Calculate the check character in an Argos stockroom",
+    domain: "check.dylanw.dev",
+    links: [{ text: "Open", url: "https://check.dylanw.dev/" }],
   },
   {
     image: AT,
     title: "Antrim Tiling",
-    subtitle: "www.antrimtiling.com",
     description: "Professional tiling services in County Antrim",
-    links: [{ text: "Access", url: "https://www.antrimtiling.com/" }],
+    domain: "www.antrimtiling.com",
+    links: [{ text: "Open", url: "https://www.antrimtiling.com/" }],
+  },
+]
+
+const PROFESSIONAL: Service[] = [
+  {
+    title: "Personal Website",
+    description: "My personal website",
+    domain: "www.dylanwilson.dev",
+    links: [{ text: "Open", url: "https://www.dylanwilson.dev/" }],
   },
   {
-    image: MR,
+    title: "Personal Blog",
+    description: "My personal website",
+    domain: "blog.dylanwilson.dev",
+    links: [{ text: "Open", url: "https://www.dylanwilson.dev/" }],
+  },
+  {
+    title: "Resume Website",
+    description: "A simple PDF viewer which displays my CV.",
+    domain: "resume.dylanw.dev",
+    links: [{ text: "Open", url: "https://resume.dylanwilson.dev/" }],
+  },
+]
+
+const MINERSREALM: Service[] = [
+  {
     title: "MinersRealm",
-    subtitle: "www.minersrealm.net",
     description: "Survival, creative and minigames Minecraft server ",
-    links: [{ text: "Access", url: "https://www.minersrealm.net/" }],
+    domain: "www.minersrealm.net",
+    links: [{ text: "Open", url: "https://www.minersrealm.net/" }],
+  },
+  {
+    title: "Pterodactyl",
+    description: "Game server management panel",
+    domain: "panel.minersrealm.net",
+    links: [{ text: "Open", url: "https://panel.minersrealm.net/" }],
   },
 ]
 
 export const SECTIONS: Section[] = [
   {
-    title: "Services",
-    description: "A list of services",
-    services: SERVICES,
+    title: "External",
+    description: "External services",
+    services: EXTERNAL_SERVICES,
+  },
+  {
+    title: "Infrastructure",
+    description: "dylanw.net",
+    services: INFRASTRUCTURE,
   },
   {
     title: "Projects",
-    description: "A list of projects",
+    description: "dylanw.dev",
     services: PROJECTS,
+  },
+  {
+    title: "Professional",
+    description: "dylanwilson.dev",
+    services: PROFESSIONAL,
+  },
+  {
+    title: "Minecraft",
+    description: "minersrealm.net",
+    services: MINERSREALM,
   },
 ]
