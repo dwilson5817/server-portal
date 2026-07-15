@@ -30,24 +30,24 @@ export function App() {
   const filteredSections = useFilteredSections({ search })
 
   return (
-    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 md:gap-y-8 p-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8  items-center">
-            <div className="flex flex-1 gap-3 items-center">
-                <img src={Logo} alt="Logo" className="h-6 md:h-8" />
-                <h1 className="text-lg md:text-2xl font-bold inline-block bg-linear-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                    Server Portal
-                </h1>
-            </div>
-            <div className="flex md:max-w-xs">
-                <Input
-                    type="search"
-                    placeholder="Search..."
-                    autoFocus
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-            </div>
+    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 p-6 md:gap-y-8">
+      <div className="grid grid-cols-1 items-center gap-y-6 md:grid-cols-2 md:gap-y-8">
+        <div className="flex flex-1 items-center gap-3">
+          <img src={Logo} alt="Logo" className="h-6 md:h-8" />
+          <h1 className="inline-block bg-linear-to-r from-white to-gray-200 bg-clip-text text-lg font-bold text-transparent md:text-2xl">
+            Server Portal
+          </h1>
         </div>
+        <div className="flex md:max-w-xs">
+          <Input
+            type="search"
+            placeholder="Search..."
+            autoFocus
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+      </div>
       {filteredSections.map((section) => (
         <PortalSection key={section.title} {...section} />
       ))}
