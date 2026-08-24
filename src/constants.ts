@@ -92,6 +92,12 @@ const INFRASTRUCTURE: Service[] = [
     domain: "auth.dylanw.net",
     links: [{ text: "Open", url: "https://auth.dylanw.net/" }],
   },
+  {
+    title: "Pelican",
+    description: "Game server management panel",
+    domain: "pelican.dylanw.net",
+    links: [{ text: "Open", url: "https://pelican.dylanw.net/" }],
+  },
 ]
 
 const PROJECTS: Service[] = [
