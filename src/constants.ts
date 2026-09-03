@@ -27,12 +27,12 @@ const EXTERNAL_SERVICES: Service[] = [
     ],
   },
   {
-    title: "rsync.net",
-    description: "Cloud storage",
-    domain: "www.rsync.net",
+    title: "Hetzner",
+    description: "Web hosting and cloud provider",
+    domain: "www.hetzner.com",
     links: [
-      { text: "Home", url: "https://rsync.net/index.html" },
-      { text: "Account", url: "https://rsync.net/am" },
+      { text: "Console", url: "https://console.hetzner.com/" },
+      { text: "Account", url: "https://accounts.hetzner.com/" },
     ],
   },
 ]
